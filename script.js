@@ -1,18 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Calculadora</title>
-</head>
-<body>
+<script>
+function somar() {
+let a = Number(document.getElementById("n1").value);
+let b = Number(document.getElementById("n2").value);
 
-<h1>Calculadora</h1>
+document.getElementById("resultado").innerText =
+"Resultado: " + (a + b);
+}
 
-<input id="n1" type="number" placeholder="Número 1">
-<input id="n2" type="number" placeholder="Número 2">
+function subtrair() {
+let a = Number(document.getElementById("n1").value);
+let b = Number(document.getElementById("n2").value);
 
-<br><br>
+document.getElementById("resultado").innerText =
+"Resultado: " + (a - b);
+}
+</script>
 
-<button onclick="somar()">+</button>
-<button onclick="subtrair()">-</button>
-
-<p id="resultado">Resultado:</p>
+</body>
+</html>
