@@ -32,4 +32,4 @@ function subtrair() {
     const subtracao = numero1 - numero2;
 
     resultado.textContent = "Resultado: " + subtracao;
-}
+} 

@@ -3,103 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Calculadora</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #141e30, #243b55);
-        }
+    <div class="calculadora">
+        <h1>Calculadora</h1>
+        <p class="descricao">Faça suas contas facilmente</p>
 
-        .calculadora {
-            width: 350px;
-            max-width: 90%;
-            padding: 30px;
-            background: white;
-            border-radius: 18px;
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
-            text-align: center;
-        }
+        <input id="n1" type="number" step="any"
+               placeholder="Primeiro número">
 
-        h1 {
-            color: #243b55;
-            margin-top: 0;
-        }
+        <input id="n2" type="number" step="any"
+               placeholder="Segundo número">
 
-        .descricao {
-            color: #777;
-            font-size: 14px;
-            margin-bottom: 25px;
-        }
+        <div class="botoes">
+            <button class="somar" onclick="somar()">+</button>
+            <button class="subtrair" onclick="subtrair()">−</button>
+        </div>
 
-        input {
-            width: 100%;
-            padding: 13px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 9px;
-            font-size: 16px;
-            outline: none;
-        }
+        <p id="resultado">Resultado: —</p>
 
-        input:focus {
-            border-color: #4361ee;
-        }
+        <p class="rodape">Calculadora • HTML, CSS e JavaScript</p>
+    </div>
 
-        .botoes {
-            display: flex;
-            gap: 12px;
-            margin-top: 5px;
-        }
-
-        button {
-            flex: 1;
-            padding: 13px;
-            border: none;
-            border-radius: 9px;
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .somar {
-            background: #2ecc71;
-        }
-
-        .subtrair {
-            background: #e74c3c;
-        }
-
-        button:hover {
-            filter: brightness(0.9);
-            transform: translateY(-2px);
-        }
-
-        #resultado {
-            margin-top: 25px;
-            padding: 15px;
-            background: #f0f3f8;
-            border-radius: 10px;
-            color: #243b55;
-            font-size: 18px;
-            font-weight: bold;
-            overflow-wrap: anywhere;
-        }
-
-        .rodape {
-            margin-top: 20px;
-            color: #999;
-            font-size: 12px;
-        }
+    <script src="script.js"></script>
+</body>
+</html>
