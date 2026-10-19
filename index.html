@@ -2,20 +2,104 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Calculadora</title>
-</head> 
-<script src="script.js"></script>
-<body>
 
-    <!-- PARTE DO HTML -->
-    <h1>Calculadora</h1>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    <input id="n1" type="number" placeholder="Número 1">
-    <input id="n2" type="number" placeholder="Número 2">
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55);
+        }
 
-    <br><br>
+        .calculadora {
+            width: 350px;
+            max-width: 90%;
+            padding: 30px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
 
-    <button onclick="somar()">+</button>
-    <button onclick="subtrair()">-</button>
+        h1 {
+            color: #243b55;
+            margin-top: 0;
+        }
 
-    <p id="resultado">Resultado:</p>
+        .descricao {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 9px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #4361ee;
+        }
+
+        .botoes {
+            display: flex;
+            gap: 12px;
+            margin-top: 5px;
+        }
+
+        button {
+            flex: 1;
+            padding: 13px;
+            border: none;
+            border-radius: 9px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .somar {
+            background: #2ecc71;
+        }
+
+        .subtrair {
+            background: #e74c3c;
+        }
+
+        button:hover {
+            filter: brightness(0.9);
+            transform: translateY(-2px);
+        }
+
+        #resultado {
+            margin-top: 25px;
+            padding: 15px;
+            background: #f0f3f8;
+            border-radius: 10px;
+            color: #243b55;
+            font-size: 18px;
+            font-weight: bold;
+            overflow-wrap: anywhere;
+        }
+
+        .rodape {
+            margin-top: 20px;
+            color: #999;
+            font-size: 12px;
+        }
