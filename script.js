@@ -1,20 +1,28 @@
-<script>
-function somar() {
-let a = Number(document.getElementById("n1").value);
-let b = Number(document.getElementById("n2").value);
+    <script>
+        function somar() const a = parseFloat(document.getElementById("n1").value);
+            const b = parseFloat(document.getElementById("n2").value);
 
-document.getElementById("resultado").innerText =
-"Resultado: " + (a + b);
-}
+            if (
+                document.getElementById("n1").value.trim() === "" ||
+                document.getElementById("n2").value.trim() === ""
+            ) {
+                document.getElementById("resultado").innerText =
+                    "Digite os dois números!";
+                return;
+            }
 
-function subtrair() {
-let a = Number(document.getElementById("n1").value);
-let b = Number(document.getElementById("n2").value);
+            document.getElementById("resultado").innerText =
+                "Resultado: " + (a + b);
+        
 
-document.getElementById("resultado").innerText =
-"Resultado: " + (a - b);
-}
-</script>
+        function subtrair() 
+            const a = parseFloat(document.getElementById("n1").value);
+            const b = parseFloat(document.getElementById("n2").value);
 
-</body>
-</html>
+            if (
+                document.getElementById("n1").value.trim() === "" ||
+                document.getElementById("n2").value.trim() === ""
+            ) 
+                document.getElementById("resultado").innerText =
+                    "Digite os dois números!";
+                return;
